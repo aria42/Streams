@@ -340,7 +340,7 @@ auto random_sample(size_t size) {
     });
 }
 
-auto random_element() {
+inline auto random_element() {
     return random_sample(1)
         .then([](auto&& vec) {
             if(vec.empty()) {
